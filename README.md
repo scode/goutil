@@ -1,2 +1,3 @@
 # goutil
-Misc Go utilities
+
+Misc Go utilities.
