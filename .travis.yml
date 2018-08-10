@@ -8,8 +8,7 @@ install:
   - go get github.com/kisielk/errcheck
 
 script:
-  - vgo build
-  - vgo test
+  - vgo test ./...
   - vgo mod -vendor
   - errcheck
   - golint
