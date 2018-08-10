@@ -9,7 +9,7 @@ install:
 
 script:
   - vgo test ./...
-  - vgo mod -vendor
+  - vgo mod vendor
   - errcheck
   - golint
   - go vet
