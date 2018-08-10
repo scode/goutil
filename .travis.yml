@@ -1,5 +1,15 @@
 language: go
 go:
-  - 1.6
-  - 1.7
-  - 1.8
+  - "1.10"
+
+install:
+  - go get -u golang.org/x/vgo
+  - go get github.com/golang/lint/golint
+  - go get github.com/kisielk/errcheck
+
+script:
+  - vgo test ./...
+  - vgo mod vendor
+  - errcheck ./...
+#  - golint ./...
+  - go vet ./...
