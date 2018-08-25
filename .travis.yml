@@ -4,7 +4,11 @@ go:
 
 install:
   - go get github.com/golang/lint/golint
-  - go get github.com/kisielk/errcheck
+  #- go get github.com/kisielk/errcheck
+  - cd /tmp && git clone https://github.com/kisielk/errcheck && cd errcheck && git checkout 2f843a121b17b3902d9a6c965b5476dc618bb742 && go install && cd .. && rm -rf errcheck
+
+env:
+  - GO111MODULE=on
 
 env:
   - GO111MODULE=on
@@ -13,4 +17,6 @@ script:
   - go test ./...
   - go vet ./...
   - errcheck ./...
+  # vendoring required until following tools are module aware
+  #- go mod vendor
   - golint ./...

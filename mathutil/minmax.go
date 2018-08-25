@@ -1,5 +1,19 @@
 package mathutil
 
+import (
+	"fmt"
+	"github.com/Sirupsen/logrus"
+)
+
+func Stuff() error {
+	return fmt.Errorf("test")
+}
+
+func keff() {
+	Stuff()
+	logrus.AddHook(nil)
+}
+
 // MinInt8 returns the minimum of (a, b).
 func MinInt8(a int8, b int8) int8 {
 	if a < b {
