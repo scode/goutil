@@ -1,5 +1,12 @@
 package mathutil
 
+import "github.com/sirupsen/logrus"
+
+// UseLogrus only exists to pull logrus in as a depedency to trigger errcheck failures.
+func UseLogrus() {
+	logrus.AddHook(nil)
+}
+
 // MinInt8 returns the minimum of (a, b).
 func MinInt8(a int8, b int8) int8 {
 	if a < b {
