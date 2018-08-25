@@ -1,5 +1,12 @@
 package mathutil
 
+import "github.com/agnivade/levenshtein"
+
+// UseLevenstein only exists to demonstrate that errcheck does not fail.
+func UseLevenstein() {
+	levenshtein.ComputeDistance("a", "b")
+}
+
 // MinInt8 returns the minimum of (a, b).
 func MinInt8(a int8, b int8) int8 {
 	if a < b {
