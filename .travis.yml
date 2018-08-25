@@ -4,7 +4,8 @@ go:
 
 install:
   - go get github.com/golang/lint/golint
-  - go get github.com/kisielk/errcheck
+  #- go get github.com/kisielk/errcheck
+  - git clone https://github.com/kisielk/errcheck && cd errcheck && go install
 
 env:
   - GO111MODULE=on
