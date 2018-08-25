@@ -6,6 +6,9 @@ install:
   - go get github.com/golang/lint/golint
   - go get github.com/kisielk/errcheck
 
+env:
+  - GO111MODULE=on
+
 script:
   - go test ./...
 #  - go mod vendor
