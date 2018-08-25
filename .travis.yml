@@ -1,15 +1,18 @@
 language: go
 go:
-  - "1.10"
+  - "1.11"
 
 install:
-  - go get -u golang.org/x/vgo
   - go get github.com/golang/lint/golint
   - go get github.com/kisielk/errcheck
 
+env:
+  - GO111MODULE=on
+
 script:
-  - vgo test ./...
-  - vgo mod vendor
+  - go test ./...
+  - go vet ./...
+  # vendoring required until following tools are module aware
+  - go mod vendor
   - errcheck ./...
   - golint ./...
-  - go vet ./...
