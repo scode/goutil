@@ -1,8 +1,9 @@
 package mathutil
 
 import (
-	"github.com/magiconair/properties/assert"
 	"testing"
+
+	"github.com/magiconair/properties/assert"
 )
 
 func TestMinInt8(t *testing.T) {
