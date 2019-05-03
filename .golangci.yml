@@ -1,0 +1,30 @@
+# all available settings of specific linters
+linters-settings:
+  errcheck:
+    check-type-assertions: true
+    ignore: fmt:.*,io/ioutil:^Read.*
+  govet:
+    check-shadowing: true
+  misspell:
+    # Correct spellings using locale preferences for US or UK.
+    # Default is to use a neutral variety of English.
+    # Setting locale to US will correct the British spelling of 'colour' to 'color'.
+    locale: US
+
+linters:
+  enable:
+    - megacheck
+    - govet
+    - golint
+    - gosec
+    - goconst
+    - errcheck
+    - gofmt
+    - goimports
+    - misspell
+    - unused
+    - unparam
+
+issues:
+  max-issues-per-linter: 0
+  max-same-issues: 0
