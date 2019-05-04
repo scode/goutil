@@ -13,17 +13,28 @@ linters-settings:
 
 linters:
   enable:
-    - megacheck
-    - govet
-    - golint
-    - gosec
-    - goconst
+    - deadcode
     - errcheck
     - gofmt
     - goimports
+    - golint
+    - gosec
+    - gosimple
+    - govet
+    - ineffassign
+    - ineffassign
+    - megacheck
     - misspell
-    - unused
+    - staticcheck
+    - staticcheck
+    - structcheck
+    - stylecheck
+    - typecheck
+    - typecheck
     - unparam
+    - unused
+    - varcheck
+    - varcheck
 
 issues:
   max-issues-per-linter: 0
